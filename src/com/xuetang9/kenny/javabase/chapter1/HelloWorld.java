@@ -8,6 +8,7 @@ public class HelloWorld {
 
 	public static void main(String[] args) {
 		System.out.println("王者农药伤不起啊！");
+		System.out.println("人民日报一周三怼！");
 	}
 
 }
