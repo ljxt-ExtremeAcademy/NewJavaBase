@@ -7,14 +7,14 @@ import java.util.Scanner;
 
 public class InputAndOutput {
 	public static void main(String[] args) throws IOException {
-		//System.out.println("¼ÆËã»úÆÁÄ»ÉÏÊä³öÒ»¾ä»°");
+		//System.out.println("è®¡ç®—æœºå±å¹•ä¸Šè¾“å‡ºä¸€å¥è¯");
 		
-		//¶ÁÈ¡ÓÃ»§ÊäÈëµÄÕûĞÍ
-		int num = System.in.read();	//°¢Èı
+		//è¯»å–ç”¨æˆ·è¾“å…¥çš„æ•´å‹
+		int num = System.in.read();	//é˜¿ä¸‰
 		
 		Scanner input = new Scanner(System.in);
 		//input.nextLine()
-		//´ø»º³åµÄ¶ÁÈ¡Æ÷ --ÔçÆÚµÄÓÃ·¨£¬½¨ÒéÊ¹ÓÃScanner
+		//å¸¦ç¼“å†²çš„è¯»å–å™¨ --æ—©æœŸçš„ç”¨æ³•ï¼Œå»ºè®®ä½¿ç”¨Scanner
 		BufferedReader bReader = new BufferedReader(new InputStreamReader(System.in));
 		//bReader.readLine()
 		

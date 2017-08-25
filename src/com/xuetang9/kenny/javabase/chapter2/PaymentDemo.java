@@ -3,37 +3,37 @@ package com.xuetang9.kenny.javabase.chapter2;
 import java.util.Scanner;
 
 /**
- * ±àĞ´³ÌĞò£¬ÈÃÓÃ»§ÊäÈë´û¿î×Ü¶î¡¢´û¿îÄêÊıÒÔ¼°ÀûÂÊ£¬ÏÔÊ¾·ÖÆÚ»¹´ûÊ±¼ä±í
-	ÔÂÖ§¸¶¶î(¹Ì¶¨Öµ) = ´û¿î×Ü¶î / ´û¿îÔÂ·İÊı
-	ÔÂÀûÏ¢ = ÔÂÀûÂÊ * Óà¶î
-	Ã¿ÔÂ³¥»¹µÄ±¾½ğ = ÔÂÖ§¸¶¶î ¨C ÔÂÀûÏ¢
- * @author ÀÏ¾ÅÑ§ÌÃ¡¤½ÑÍ·
+ * ç¼–å†™ç¨‹åºï¼Œè®©ç”¨æˆ·è¾“å…¥è´·æ¬¾æ€»é¢ã€è´·æ¬¾å¹´æ•°ä»¥åŠåˆ©ç‡ï¼Œæ˜¾ç¤ºåˆ†æœŸè¿˜è´·æ—¶é—´è¡¨
+	æœˆæ”¯ä»˜é¢(å›ºå®šå€¼) = è´·æ¬¾æ€»é¢ / è´·æ¬¾æœˆä»½æ•°
+	æœˆåˆ©æ¯ = æœˆåˆ©ç‡ * ä½™é¢
+	æ¯æœˆå¿è¿˜çš„æœ¬é‡‘ = æœˆæ”¯ä»˜é¢ â€“ æœˆåˆ©æ¯
+ * @author è€ä¹å­¦å ‚Â·çª–å¤´
  * @version 1.0
- * @date 2017Äê7ÔÂ13ÈÕ ÏÂÎç9:11:11
- * @copyright ÀÏ¾ÅÑ§ÌÃ
+ * @date 2017å¹´7æœˆ13æ—¥ ä¸‹åˆ9:11:11
+ * @copyright è€ä¹å­¦å ‚
  * @remarks TODO
  *
  */
 public class PaymentDemo {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-		System.out.println("´û¿î×Ü½ğ¶î£º");
+		System.out.println("è´·æ¬¾æ€»é‡‘é¢ï¼š");
 		double amount = input.nextDouble();
-		System.out.println("´û¿îÄêÏŞ£º");
+		System.out.println("è´·æ¬¾å¹´é™ï¼š");
 		int year = input.nextInt();
-		System.out.println("ÀûÂÊ£º");
+		System.out.println("åˆ©ç‡ï¼š");
 		double rate = input.nextDouble();
 		
-		//ÀûÏ¢¡¢±¾½ğ¡¢Óà¶î
+		//åˆ©æ¯ã€æœ¬é‡‘ã€ä½™é¢
 		double interest = 0;
 		double benjin = 0;
-		double balence = amount;	//¸Õ¿ªÊ¼µÄÓà¶îÓ¦¸Ã¸ú×Ü½ğ¶îÏàÍ¬
-		double monthMoney = amount / (year * 12);	//Ã¿¸öÔÂÒª¹Ì¶¨»¹µÄÇ®Êı--ÔÂÖ§¸¶¶î(¹Ì¶¨Öµ)
-		System.out.println("ÔÂ·İ\tÀûÏ¢\t±¾½ğ\tÓà¶î");
+		double balence = amount;	//åˆšå¼€å§‹çš„ä½™é¢åº”è¯¥è·Ÿæ€»é‡‘é¢ç›¸åŒ
+		double monthMoney = amount / (year * 12);	//æ¯ä¸ªæœˆè¦å›ºå®šè¿˜çš„é’±æ•°--æœˆæ”¯ä»˜é¢(å›ºå®šå€¼)
+		System.out.println("æœˆä»½\tåˆ©æ¯\tæœ¬é‡‘\tä½™é¢");
 		for(int i = 1; i <= year * 12; i++){
-			//ÔÂÀûÏ¢ = ÔÂÀûÂÊ * Óà¶î
+			//æœˆåˆ©æ¯ = æœˆåˆ©ç‡ * ä½™é¢
 			interest = rate / 100 * balence;
-			//Ã¿ÔÂ³¥»¹µÄ±¾½ğ = ÔÂÖ§¸¶¶î ¨C ÔÂÀûÏ¢
+			//æ¯æœˆå¿è¿˜çš„æœ¬é‡‘ = æœˆæ”¯ä»˜é¢ â€“ æœˆåˆ©æ¯
 			benjin = monthMoney - interest;
 			balence -= benjin;
 			System.out.printf("%d\t%.2f\t%.2f\t%.2f\n", i, interest, benjin, balence);

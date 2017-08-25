@@ -3,20 +3,20 @@ package com.xuetang9.kenny.javabase.chapter2;
 import java.util.Scanner;
 
 /**
- * ÅĞ¶Ï×Ö·û´®ÊÇ·ñ»ØÎÄ
- * @author ÀÏ¾ÅÑ§ÌÃ¡¤½ÑÍ·
+ * åˆ¤æ–­å­—ç¬¦ä¸²æ˜¯å¦å›æ–‡
+ * @author è€ä¹å­¦å ‚Â·çª–å¤´
  * @version 1.0
- * @date 2017Äê7ÔÂ13ÈÕ ÏÂÎç9:06:09
- * @copyright ÀÏ¾ÅÑ§ÌÃ
+ * @date 2017å¹´7æœˆ13æ—¥ ä¸‹åˆ9:06:09
+ * @copyright è€ä¹å­¦å ‚
  * @remarks TODO
  *
  */
 public class HUIWenDemo {
 	public static void main(String[] args) {
-		//µÚÒ»¸öÔªËØºÍµ¹ÊıµÚÒ»¸öÔªËØ¡£¡£¡£¡£¡£
-		System.out.println("ÇëÊäÈëÒ»¸ö×Ö·û´®£º");
+		//ç¬¬ä¸€ä¸ªå…ƒç´ å’Œå€’æ•°ç¬¬ä¸€ä¸ªå…ƒç´ ã€‚ã€‚ã€‚ã€‚ã€‚
+		System.out.println("è¯·è¾“å…¥ä¸€ä¸ªå­—ç¬¦ä¸²ï¼š");
 		String value = new Scanner(System.in).next();
-		boolean isHuiWen = true;	//ÊÇ·ñÊÇ»ØÎÄ´®
+		boolean isHuiWen = true;	//æ˜¯å¦æ˜¯å›æ–‡ä¸²
 //		int lowIndex = 0;
 //		int hightIndex = value.length() - 1;
 		for(int i = 0; i < value.length() / 2; i++){
@@ -26,9 +26,9 @@ public class HUIWenDemo {
 			}
 		}
 		if(isHuiWen){
-			System.out.println("ÊÇ»ØÎÄ");
+			System.out.println("æ˜¯å›æ–‡");
 		}else{
-			System.out.println("²»ÊÇ»ØÎÄ");
+			System.out.println("ä¸æ˜¯å›æ–‡");
 		}
 
 	}

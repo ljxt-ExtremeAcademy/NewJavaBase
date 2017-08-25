@@ -1,10 +1,10 @@
 package com.xuetang9.kenny.javabase.chapter2;
 /**
- * ì³²¨ÄÇÆõÊıÁĞ
- * @author ÀÏ¾ÅÑ§ÌÃ¡¤½ÑÍ·
+ * æ–æ³¢é‚£å¥‘æ•°åˆ—
+ * @author è€ä¹å­¦å ‚Â·çª–å¤´
  * @version 1.0
- * @date 2017Äê7ÔÂ13ÈÕ ÏÂÎç8:55:10
- * @copyright ÀÏ¾ÅÑ§ÌÃ
+ * @date 2017å¹´7æœˆ13æ—¥ ä¸‹åˆ8:55:10
+ * @copyright è€ä¹å­¦å ‚
  * @remarks TODO
  *
  */
@@ -13,7 +13,7 @@ public class FibDemo {
 	public static void main(String[] args) {
 		int a = 1, b = 1;
 		System.out.print(a + ", " + b + ", ");
-		for(int i = 0; i < 20; i++){//¿ØÖÆÑ­»·´ÎÊı
+		for(int i = 0; i < 20; i++){//æ§åˆ¶å¾ªç¯æ¬¡æ•°
 			int c = a + b;
 			System.out.println(c + ", ");
 			a = b;

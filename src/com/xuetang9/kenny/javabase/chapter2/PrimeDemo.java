@@ -1,10 +1,10 @@
 package com.xuetang9.kenny.javabase.chapter2;
 /**
- * ´òÓ¡1-100ÄÚµÄËùÓĞËØÊı
- * @author ÀÏ¾ÅÑ§ÌÃ¡¤½ÑÍ·
+ * æ‰“å°1-100å†…çš„æ‰€æœ‰ç´ æ•°
+ * @author è€ä¹å­¦å ‚Â·çª–å¤´
  * @version 1.0
- * @date 2017Äê7ÔÂ13ÈÕ ÏÂÎç9:46:12
- * @copyright ÀÏ¾ÅÑ§ÌÃ
+ * @date 2017å¹´7æœˆ13æ—¥ ä¸‹åˆ9:46:12
+ * @copyright è€ä¹å­¦å ‚
  * @remarks TODO
  *
  */
@@ -17,20 +17,20 @@ public class PrimeDemo {
 		System.out.println(nums.length);
 		
 		
-		boolean isPrime = true;	//ÊÇ·ñÊÇËØÊı
-		int count = 0;			//¼ÆÊıÆ÷
+		boolean isPrime = true;	//æ˜¯å¦æ˜¯ç´ æ•°
+		int count = 0;			//è®¡æ•°å™¨
 		for (int i = 3; i <= 100; i += 2) {
 			isPrime = true;
-			//ÔÚÄÚÑ­»·ÖĞÅĞ¶ÏÄ³¸öÊı×ÖÊÇ·ñÊÇËØÊı
+			//åœ¨å†…å¾ªç¯ä¸­åˆ¤æ–­æŸä¸ªæ•°å­—æ˜¯å¦æ˜¯ç´ æ•°
 			for(int j = 2; j < i; j++){
-				if(i % j == 0){//·Ç1ºÍ×ÔÉíÖĞµÄÄ³¸öÊı×Ö¿ÉÒÔ±»Õû³ı£¬Ö¤Ã÷Õâ¸öÊı×Ö²»ÊÇËØÊı
+				if(i % j == 0){//é1å’Œè‡ªèº«ä¸­çš„æŸä¸ªæ•°å­—å¯ä»¥è¢«æ•´é™¤ï¼Œè¯æ˜è¿™ä¸ªæ•°å­—ä¸æ˜¯ç´ æ•°
 					isPrime = false;
 					break;
 				}
 			}
-			if(isPrime){//Èç¹ûÊÇËØÊı£¬¾Í´òÓ¡³öÀ´
+			if(isPrime){//å¦‚æœæ˜¯ç´ æ•°ï¼Œå°±æ‰“å°å‡ºæ¥
 				System.out.print(i);
-				count++;	//ËØÊıµÄ×ÜÊı
+				count++;	//ç´ æ•°çš„æ€»æ•°
 				if(count % 10 == 0)
 					System.out.print("\n");
 				else

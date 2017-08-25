@@ -3,60 +3,60 @@ package com.xuetang9.kenny.javabase.chapter2;
 import javax.xml.stream.events.StartElement;
 
 /**
- * Ê¹ÓÃ¿ØÖÆÌ¨´òÓ¡Î§ÆåµÄÆåÅÌ
- * @author ÀÏ¾ÅÑ§ÌÃ¡¤½ÑÍ·
+ * ä½¿ç”¨æ§åˆ¶å°æ‰“å°å›´æ£‹çš„æ£‹ç›˜
+ * @author è€ä¹å­¦å ‚Â·çª–å¤´
  * @version 1.0
- * @date 2017Äê7ÔÂ13ÈÕ ÏÂÎç9:24:04
- * @copyright ÀÏ¾ÅÑ§ÌÃ
+ * @date 2017å¹´7æœˆ13æ—¥ ä¸‹åˆ9:24:04
+ * @copyright è€ä¹å­¦å ‚
  * @remarks TODO
  *
  */
 public class GobangDemo {
-	//1.Ìî³äÓÃÀ´±íÊ¾ÆåÅÌµÄ¶şÎ¬Êı×é
+	//1.å¡«å……ç”¨æ¥è¡¨ç¤ºæ£‹ç›˜çš„äºŒç»´æ•°ç»„
 	static String[][] board = new String[19][19];
 	
 	public static void main(String[] args) {	
 		for (int i = 0; i < board.length; i++) {
 			for (int j = 0; j < board[i].length; j++) {		
-				if(i == 0 && j == 0){//ÆåÅÌµÄ×óÉÏ½Ç
-					board[i][j] = "©°";
+				if(i == 0 && j == 0){//æ£‹ç›˜çš„å·¦ä¸Šè§’
+					board[i][j] = "â”Œ";
 				}else if(i == 0 && j == board[i].length - 1){
-					board[i][j] = "©´";
+					board[i][j] = "â”";
 				}else if(i == board.length - 1 && j == 0){
-					board[i][j] = "©¸";
+					board[i][j] = "â””";
 				}else if(i == board.length - 1 && j == board[i].length - 1){
-					board[i][j] = "©¼";
+					board[i][j] = "â”˜";
 				}else if(i == 0 || i == board.length - 1){
-					board[i][j] = "©¤";
+					board[i][j] = "â”€";
 				}else if(j == 0 || j == board[i].length - 1){
-					board[i][j] = "©¦";
+					board[i][j] = "â”‚";
 				}else{
-					//´òÓ¡9¸öºÚĞÇ    3   9   15
+					//æ‰“å°9ä¸ªé»‘æ˜Ÿ    3   9   15
 					if((i - 3) % 6 == 0 && (j - 3) % 6 == 0){
-						board[i][j] = "¡î";
+						board[i][j] = "â˜†";
 					}else
-						board[i][j] = "©à";
+						board[i][j] = "â”¼";
 				}
 				if(i != 0 && i != board.length - 1 && j == 0){
-					board[i][j] = "©À";
+					board[i][j] = "â”œ";
 				}else if(j != 0 & j != board[i].length - 1 && i == 0){
-					board[i][j] = "©Ğ";
+					board[i][j] = "â”¬";
 				}else if(i != 0 && i != board.length - 1 && j == board[i].length - 1){
-					board[i][j] = "©È";
+					board[i][j] = "â”¤";
 				}else if(j != 0 & j != board[i].length - 1 && i == board.length - 1){
-					board[i][j] = "©Ø";
+					board[i][j] = "â”´";
 				}
 			}
 		}
 		
-		board[9][9] = "¡ñ";
-		board[10][10] = "¡ñ";
-		board[11][11] = "¡ñ";
-		board[12][12] = "¡ñ";
-		board[13][13] = "¡ñ";
-		board[0][9] = "¡ğ";
+		board[9][9] = "â—";
+		board[10][10] = "â—";
+		board[11][11] = "â—";
+		board[12][12] = "â—";
+		board[13][13] = "â—";
+		board[0][9] = "â—‹";
 		
-		//2.´òÓ¡¶şÎ¬Êı×é
+		//2.æ‰“å°äºŒç»´æ•°ç»„
 		for (int i = 0; i < board.length; i++) {
 			for (int j = 0; j < board[i].length; j++) {
 				System.out.print(board[i][j]);
@@ -64,18 +64,18 @@ public class GobangDemo {
 			System.out.println();
 		}
 		
-		isWin("¡ñ", 11, 11);
+		isWin("â—", 11, 11);
 	}
 	/**
-	 * ÅĞ¶ÏÄ³¸öÆåÊÖÊÇ·ñÓ®µÃÁË±ÈÈü
-	 * @param chess Æå×ÓÀàĞÍ¡ñ»ò¡ğ
+	 * åˆ¤æ–­æŸä¸ªæ£‹æ‰‹æ˜¯å¦èµ¢å¾—äº†æ¯”èµ›
+	 * @param chess æ£‹å­ç±»å‹â—æˆ–â—‹
 	 * @param row
 	 * @param col
 	 * @return
 	 */
 	public static boolean isWin(String chess, int row, int col){
-		int count = 0;	//Ä³É«Æå×ÓµÄÊıÁ¿
-		//ºáÏò
+		int count = 0;	//æŸè‰²æ£‹å­çš„æ•°é‡
+		//æ¨ªå‘
 		for(int i = 0; i < board[col].length; i++){
 			if(board[row][i].equals(chess)){
 				count++;
@@ -84,7 +84,7 @@ public class GobangDemo {
 			}
 			if(count == 5) return true;
 		}
-		//×İÏò
+		//çºµå‘
 		count = 0;
 		for(int i = 0; i < board.length; i++){
 			if(board[i][col].equals(chess)){
@@ -94,11 +94,11 @@ public class GobangDemo {
 			}
 			if(count == 5) return true;
 		}
-		//×óĞ±
+		//å·¦æ–œ
 		count = 0;
 		int startRow = row;
 		int startCol = col;
-//		while(true){//ÕÒµ½µ±Ç°Æå×ÓÓÒÉÏ½Ç¶ÔÓ¦µÄÆğÊ¼µã×ø±ê
+//		while(true){//æ‰¾åˆ°å½“å‰æ£‹å­å³ä¸Šè§’å¯¹åº”çš„èµ·å§‹ç‚¹åæ ‡
 //			startRow--;
 //			startCol++;	
 //			if(startRow < 0 || startCol > board[row].length - 1){
@@ -118,7 +118,7 @@ public class GobangDemo {
 //			startRow++;
 //			startCol--;
 //		}
-		//×óĞ±µÚ¶şÖÖË¼Â·£¬·Ö±ğ¼ÆËãÓÒÉÏºÍ×óÏÂµÄÍ¬É«Æå×Ó×ÜÊı
+		//å·¦æ–œç¬¬äºŒç§æ€è·¯ï¼Œåˆ†åˆ«è®¡ç®—å³ä¸Šå’Œå·¦ä¸‹çš„åŒè‰²æ£‹å­æ€»æ•°
 		while(startRow > -1 && startCol < board[col].length){
 			if(board[startRow][startCol].equals(chess)){
 				count++;
@@ -137,7 +137,7 @@ public class GobangDemo {
 			startRow++;
 			startCol--;
 		}
-		//ÓÒĞ±Ë¼Â·£¬·Ö±ğ¼ÆËãÓÒÏÂºÍ×óÉÏµÄÍ¬É«Æå×Ó×ÜÊı
+		//å³æ–œæ€è·¯ï¼Œåˆ†åˆ«è®¡ç®—å³ä¸‹å’Œå·¦ä¸Šçš„åŒè‰²æ£‹å­æ€»æ•°
 		startRow = row;
 		startCol = col;
 		count = 0;
@@ -160,7 +160,7 @@ public class GobangDemo {
 			startCol++;
 		}	
 		
-		System.out.println("ÓÒĞ±Æå×Ó×ÜÊı£º" + count);		
+		System.out.println("å³æ–œæ£‹å­æ€»æ•°ï¼š" + count);		
 		return true;
 	}
 	

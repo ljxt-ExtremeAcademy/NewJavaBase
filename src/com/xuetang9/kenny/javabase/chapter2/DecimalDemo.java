@@ -14,7 +14,7 @@ public class DecimalDemo {
 		
 		float sum = 0;
 		for(float i = 0.01f; i < 1.0f; i = i + 0.01f){
-			sum += i;	//Ã¿´ÎÀÛ¼Ó0.01
+			sum += i;	//æ¯æ¬¡ç´¯åŠ 0.01
 		}
 		System.out.println(sum);
 		
@@ -24,7 +24,7 @@ public class DecimalDemo {
 		}
 		System.out.println(sum1);
 		
-		System.out.println("¸Ä½øÏÂ£º");
+		System.out.println("æ”¹è¿›ä¸‹ï¼š");
 		double currValue = 0.01;
 		double sum2 = 0;
 		for (int i = 0; i < 100; i++) {
@@ -33,7 +33,7 @@ public class DecimalDemo {
 		}
 		System.out.println(sum2);
 		
-		System.out.println("´Ó´óÀÛ¼Óµ½Ð¡");
+		System.out.println("ä»Žå¤§ç´¯åŠ åˆ°å°");
 		currValue = 1;
 		double sum3 = 0;
 		for (int i = 0; i < 100; i++) {
@@ -46,7 +46,7 @@ public class DecimalDemo {
 		
 //		double i = 1.0;
 //		double sum = 0;
-//		while(i != 0){	//¾¡Á¿²»ÒªÊ¹ÓÃ¸¡µãÐÍÊý×Ö½øÐÐµÈÖµÅÐ¶Ï
+//		while(i != 0){	//å°½é‡ä¸è¦ä½¿ç”¨æµ®ç‚¹åž‹æ•°å­—è¿›è¡Œç­‰å€¼åˆ¤æ–­
 //			sum += i;
 //			i -= 0.1;
 //			System.out.println(i);

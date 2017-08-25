@@ -3,14 +3,14 @@ package com.xuetang9.kenny.javabase.chapter1;
 import javax.swing.JOptionPane;
 
 /**
- * ÓÃÀ´ÑİÊ¾githubµÄ»ù±¾ÓÃ·¨
- * @author ½ÑÍ·
+ * ç”¨æ¥æ¼”ç¤ºgithubçš„åŸºæœ¬ç”¨æ³•
+ * @author çª–å¤´
  *
  */
 public class HelloWorld {
 
 	public static void main(String[] args) {
-		JOptionPane.showMessageDialog(null, "ÍõÕßÅ©Ò©ÉË²»Æğ°¡£¡");
+		JOptionPane.showMessageDialog(null, "ç‹è€…å†œè¯ä¼¤ä¸èµ·å•Šï¼");
 		
 	}
 

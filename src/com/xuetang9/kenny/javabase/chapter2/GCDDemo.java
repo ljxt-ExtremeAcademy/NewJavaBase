@@ -3,11 +3,11 @@ package com.xuetang9.kenny.javabase.chapter2;
 import java.util.Scanner;
 
 /**
- * ÇóÁ½¸öÊıµÄ×î´ó¹«Ô¼Êı
- * @author ÀÏ¾ÅÑ§ÌÃ¡¤½ÑÍ·
+ * æ±‚ä¸¤ä¸ªæ•°çš„æœ€å¤§å…¬çº¦æ•°
+ * @author è€ä¹å­¦å ‚Â·çª–å¤´
  * @version 1.0
- * @date 2017Äê7ÔÂ13ÈÕ ÏÂÎç8:59:39
- * @copyright ÀÏ¾ÅÑ§ÌÃ
+ * @date 2017å¹´7æœˆ13æ—¥ ä¸‹åˆ8:59:39
+ * @copyright è€ä¹å­¦å ‚
  * @remarks TODO
  *
  */
@@ -15,20 +15,20 @@ public class GCDDemo {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-		int gcd = 1;	//×î´ó¹«Ô¼Êı
-		int i = 2;		//´ÓÊı×Ö2¿ªÊ¼Õû³ı
-		System.out.println("ÇëÊäÈëÁ½¸öÊı×Ö£º");
+		int gcd = 1;	//æœ€å¤§å…¬çº¦æ•°
+		int i = 2;		//ä»æ•°å­—2å¼€å§‹æ•´é™¤
+		System.out.println("è¯·è¾“å…¥ä¸¤ä¸ªæ•°å­—ï¼š");
 		int num1 = input.nextInt();
 		int num2 = input.nextInt();
 		
-		//×î´ó¹«Ô¼Êı£º´Ó2¿ªÊ¼£¬µ½num1 »ò  num2½áÊø   ÇóÄ³¸öÊı×Ö¿ÉÒÔÍ¬Ê±±»num1ºÍnum2Õû³ı
+		//æœ€å¤§å…¬çº¦æ•°ï¼šä»2å¼€å§‹ï¼Œåˆ°num1 æˆ–  num2ç»“æŸ   æ±‚æŸä¸ªæ•°å­—å¯ä»¥åŒæ—¶è¢«num1å’Œnum2æ•´é™¤
 		while(i < num1 && i < num2){
-			if(num1 % i == 0 && num2 % i == 0){//Ä³´ÎÑ­»·ÇóµÄÊÇÔ¼Êı
-				gcd = i;//²»ĞèÒªÌø³öÑ­»·£¬Ã¿´ÎµÄÔ¼Êı½øĞĞ¸²¸Ç
+			if(num1 % i == 0 && num2 % i == 0){//æŸæ¬¡å¾ªç¯æ±‚çš„æ˜¯çº¦æ•°
+				gcd = i;//ä¸éœ€è¦è·³å‡ºå¾ªç¯ï¼Œæ¯æ¬¡çš„çº¦æ•°è¿›è¡Œè¦†ç›–
 			}
 			i++;
 		}
-		System.out.println(num1 + "ºÍ" + num2 + "µÄ×î´ó¹«Ô¼ÊıÊÇ£º" + gcd);
+		System.out.println(num1 + "å’Œ" + num2 + "çš„æœ€å¤§å…¬çº¦æ•°æ˜¯ï¼š" + gcd);
 
 	}
 
