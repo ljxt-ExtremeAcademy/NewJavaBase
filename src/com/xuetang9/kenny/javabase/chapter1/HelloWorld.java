@@ -11,7 +11,6 @@ public class HelloWorld {
 
 	public static void main(String[] args) {
 		JOptionPane.showMessageDialog(null, "王者农药伤不起啊！");
-		
 	}
 
 }
